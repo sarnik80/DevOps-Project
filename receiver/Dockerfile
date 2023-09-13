@@ -28,6 +28,5 @@ WORKDIR /final
 
 COPY --from=builder /app/result .
 
-EXPOSE 9090
 
 CMD [ "./result" ]

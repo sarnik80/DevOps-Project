@@ -16,7 +16,7 @@ func main() {
 	var (
 		user       = "guest"
 		password   = "guest"
-		host       = "172.17.0.2"
+		host       = "rbt"
 		rabbitPort = "5672"
 		queueName  = "hello"
 	)
