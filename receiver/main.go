@@ -11,10 +11,10 @@ import (
 func main() {
 	// database config
 	var (
-		user     = "postgres"
+		user     = "receiver_user"
 		password = "2980"
-		host     = "172.17.0.3"
-		dbName   = "postgres"
+		host     = "db"
+		dbName   = "tmp"
 		port     = "5432"
 	)
 	connectionString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbName)
@@ -32,7 +32,7 @@ func main() {
 	var (
 		Ruser      = "guest"
 		Rpassword  = "guest"
-		Rhost      = "172.17.0.2"
+		Rhost      = "rbt"
 		rabbitPort = "5672"
 		queueName  = "hello"
 	)

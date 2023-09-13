@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e34a545-a6c2-4d11-8006-ad00d458d995" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reciever.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/.idea/reciever.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/broker/rabbitmq.go" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/broker/rabbitmq.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbRepo/driver.go" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/dbRepo/driver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbRepo/repository/postgres.go" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/dbRepo/repository/postgres.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/models/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sender/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sender/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sender/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../sender/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../receiver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../receiver/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

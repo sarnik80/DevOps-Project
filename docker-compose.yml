@@ -13,8 +13,31 @@ services:
     ports:
       - "9090:9090"
   # receiver
+  receiver:
+    build: ./receiver
+    container_name: receiver
+    depends_on:
+      - db
+      - rabbit
+    restart: on-failure
+
+    networks:
+      - db-net
+      - sre-net
 
   # database
+  db:
+    image: postgres:15.3-alpine
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_USER: receiver_user
+      POSTGRES_PASSWORD: 2980
+      POSTGRES_DB: tmp
+    networks:
+      - db-net
+    volumes:
+      - psql-vol:/var/lib/postgresql/data
 
   # nginx
 
@@ -35,3 +58,8 @@ services:
 # networks
 networks:
   sre-net:
+  db-net:
+
+#volumes
+volumes:
+  psql-vol:
