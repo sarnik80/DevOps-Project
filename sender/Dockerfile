@@ -10,11 +10,11 @@ ENV CGO_ENABLED 0
 ENV GOPATH /go
 ENV GOCACHE /go-build
 
-COPY go.mod go.sum ./
+COPY ./sender/go.mod ./sender/go.sum ./
 RUN --mount=type=cache,target=/go/pkg/mod/cache \
     go mod download
 
-COPY . .
+COPY ./sender .
 
 RUN --mount=type=cache,target=/go/pkg/mod/cache \
     --mount=type=cache,target=/go-build \
