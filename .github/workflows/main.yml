@@ -13,8 +13,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-
-
       - name: Build Docker Image
-        run: |
-          docker build -t sender:latest -f ./sender/Dockerfile .
+        run: docker build -t sender:latest -f ./sender/Dockerfile .
+
+
+  build-receiver:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: push to docker
+        run: docker build -t receiver:latest -f ./receiver/Dockerfile .
+
