@@ -13,16 +13,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Build Docker Image
+      - name: Build Docker Image ( sender )
+        run: make build  DOCKER_IMAGE_NAME="ghcr.io/sarnik80/sender:latest" DOCKERFILE="./sender/Dockerfile"
 
-        run: make build  DOCKER_IMAGE_NAME="sender:latest" DOCKERFILE="./sender/Dockerfile"
+      - name: Build Docker Image ( receiver )
+        run: make build  DOCKER_IMAGE_NAME="ghcr.io/sarnik80/receiver:latest" DOCKERFILE="./receiver/Dockerfile"
 
-      - name: push to docker
-        run: docker build -t receiver:latest -f ./receiver/Dockerfile .
+      - name: Login to the GitHub container registry endpoint
+        run: docker login --username sarnik80 --password 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 ghcr.io
 
+      - name: Push Docker Image (sender)
+        run: docker push ghcr.io/sarnik80/sender:latest
 
-#  push:
-#    runs-on: ubuntu-latest
-#    needs: build
-#
-
+      - name: Push Docker Image (receiver)
+        run: docker push ghcr.io/sarnik80/receiver:latest
