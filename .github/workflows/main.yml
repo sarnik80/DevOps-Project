@@ -22,9 +22,9 @@ jobs:
       - name: Build And Push Docker Image ( sender )
         run: |
           make build  DOCKER_IMAGE_NAME="ghcr.io/sarnik80/sender:latest" DOCKERFILE="./sender/Dockerfile"
-          docker push ghcr.io/sarnik80/sender:latest
+          make push  PATH_TO_PUSH="ghcr.io/sarnik80/sender:latest"
 
       - name: Build And Push Docker Image ( receiver )
         run: |
           make build  DOCKER_IMAGE_NAME="ghcr.io/sarnik80/receiver:latest" DOCKERFILE="./receiver/Dockerfile"
-          docker push ghcr.io/sarnik80/receiver:latest
+          make push PATH_TO_PUSH="ghcr.io/sarnik80/receiver:latest"
